@@ -157,6 +157,17 @@
 
   section.block:first-of-type h2 { border-top: none; padding-top: 0; }
 
+
+  h3 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 1.75rem 0 0.5rem;
+  }
+
+  .summary ul { margin: 0.75rem 0; }
+  .summary p + p { margin-top: 0.75rem; }
+
   p { margin: 0 0 1rem; }
   p:last-child { margin-bottom: 0; }
 
@@ -207,219 +218,297 @@
 
   <main id="doc-ru" lang="ru">
     <h1>Политика конфиденциальности</h1>
-    <p class="effective">Действует с 13 сентября 2026 года</p>
+    <p class="effective">Версия 2.1. Действует с 6 октября 2026 года. Заменяет редакцию от 29 сентября 2026 года.</p>
 
     <div class="summary">
-      <p>Приложение не собирает о вас ничего. Всё, что вы записываете, остаётся на вашем устройстве. У приложения нет ни сервера, ни учётных записей, ни аналитики, ни рекламы, ни сторонних библиотек.</p>
-      <p>Исключения выключены по умолчанию и включаются вами по одному: погода — приложение запрашивает её у Apple по вашему примерному местоположению; чтение из «Здоровья» — дни менструации, сон и выпитая вода, каждое своим переключателем; и синхронизация через iCloud, которая кладёт ваши записи в ваше же личное хранилище iCloud. Подробности ниже.</p>
+      <p>Ваш дневник остаётся на вашем устройстве. У приложения нет ни сервера, ни учётной записи, ни аналитики, ни рекламы, ни слежки, ни сторонних библиотек. Мы, разработчик, не получаем из приложения ничего.</p>
+      <p>Три вещи <strong>выключены по умолчанию</strong>, и каждую включаете вы сами:</p>
+      <ul>
+        <li><strong>запись в Apple «Здоровье»</strong>: завершённые приступы как записи о головной боли, а также тошнота;</li>
+        <li><strong>чтение из Apple «Здоровья»</strong>: дни менструации и сон, каждое своим переключателем;</li>
+        <li><strong>запись погоды</strong>: когда вы начинаете приступ, ваше примерное местоположение отправляется в Apple WeatherKit, чтобы узнать атмосферное давление.</li>
+      </ul>
+      <p>Всё остальное покидает устройство только тогда, когда вы отправляете это сами: файл PDF или CSV, которым вы поделились, или письмо в поддержку.</p>
     </div>
 
     <section class="block">
-      <h2>Что приложение хранит</h2>
-      <p>Только то, что вы вводите сами:</p>
+      <h2>Кто отвечает за данные</h2>
+      <p>Оператор данных — <strong>fluco.studio</strong>, [адрес], почта <a href="mailto:privacy@fluco.studio">privacy@fluco.studio</a>.</p>
+      <p>Оператором мы выступаем только в той малой части, которая может до нас дойти или которую приложение отправляет само (запрос погоды и письма, которые вы пишете в поддержку; оба случая описаны ниже). Ваш дневник к нам не попадает никогда.</p>
+    </section>
+
+    <section class="block">
+      <h2>Что приложение хранит на устройстве</h2>
+      <p>Только то, что вы вводите сами или что приложение записывает по вашему действию:</p>
       <ul>
-        <li>время начала и конца приступов, силу боли, симптомы и заметки;</li>
-        <li>триггеры, которые вы отмечаете;</li>
-        <li>препараты из вашего списка, время приёма и дозы;</li>
-        <li>погоду в момент начала приступа, если вы включили её запись;</li>
-        <li>выбранный язык интерфейса, включён ли обмен с «Здоровьем» и синхронизация.</li>
+        <li><strong>приступы</strong>: начало и конец, сила боли и как она менялась, симптомы, аура, предвестники, где и как болело, что вы делали для облегчения, ваши заметки;</li>
+        <li><strong>лекарства</strong>: ваш список (название, доза, единица, класс, расписание напоминаний) и каждый записанный приём — время, количество, эффект, побочные эффекты и понадобилась ли вторая доза;</li>
+        <li><strong>триггеры и способы облегчения</strong>, в том числе добавленные вами;</li>
+        <li><strong>дни</strong>: триггеры, отмеченные за день, уровень стресса и сколько воды вы выпили — всё это вы вводите сами;</li>
+        <li><strong>опросник MIDAS</strong>: ваши ответы и итоговый балл;</li>
+        <li><strong>план на приступ</strong>: его шаги и, если вы их заполнили, имя, специальность и телефон вашего врача;</li>
+        <li><strong>профиль</strong>: имя, смайлик и фотография. Фотография выбирается через системный выбор фото, поэтому приложение видит только тот снимок, который вы выбрали, и доступа к остальной медиатеке не имеет;</li>
+        <li><strong>погоду</strong> в момент начала приступа, если запись погоды включена (само местоположение не сохраняется);</li>
+        <li><strong>настройки</strong>: язык интерфейса и отчёта, оформление, напоминания и положение каждого переключателя.</li>
       </ul>
+      <p>Всё это лежит в собственном хранилище приложения на устройстве и в общей области, доступной только виджетам самого приложения, — чтобы виджет на экране «Домой» и Live Activity на экране блокировки показывали, идёт ли приступ. Данные защищены встроенным шифрованием устройства.</p>
+      <p><strong>Синхронизации через облако нет.</strong> Приложение не копирует дневник ни в iCloud, ни куда-либо ещё. Если вы делаете резервную копию устройства («Резервная копия iCloud» или компьютер), iOS включает в неё данные приложения, как и любого другого; этим управляют ваши настройки резервного копирования и Apple.</p>
     </section>
 
     <section class="block">
-      <h2>Где эти данные лежат</h2>
-      <p>В памяти вашего устройства, в хранилище приложения. Никуда, кроме описанного ниже запроса погоды и — если вы включили синхронизацию — вашего же личного хранилища iCloud, они не отправляются.</p>
-    </section>
-
-    <section class="block">
-      <h2>Синхронизация через iCloud</h2>
-      <p class="notice"><strong>В текущей версии синхронизация отключена:</strong> переключателя в настройках нет, и записи не покидают устройство ни при каких условиях. Раздел ниже описывает, как это будет работать, когда синхронизация появится.</p>
-      <p>В настройках есть переключатель синхронизации. <strong>По умолчанию он выключен</strong>, и пока он выключен, записи не покидают устройство.</p>
-      <p>Если вы его включите, записи синхронизируются через iCloud (CloudKit) и лежат в <strong>личной</strong> базе данных вашей учётной записи Apple — на серверах Apple, под вашим Apple ID. У разработчика доступа к ним нет: личная база видна только владельцу учётной записи. Управление этими данными — в настройках iCloud на вашем устройстве; хранение на стороне Apple подчиняется политике конфиденциальности Apple.</p>
-    </section>
-
-    <section class="block">
-      <h2>Погода и местоположение</h2>
-      <p class="notice"><strong>В текущей версии погода отключена:</strong> включить её негде, местоположение не запрашивается ни разу, и приложение не делает ни одного сетевого запроса. Раздел ниже описывает, как это будет работать, когда погода появится.</p>
-      <p>Это единственное, ради чего приложение выходит в сеть. <strong>По умолчанию выключено</strong> — включается вами в настройках приложения.</p>
-      <p>Если вы его включите, в момент начала приступа приложение узнаёт погоду там, где вы находитесь, и сохраняет вместе с записью атмосферное давление, его изменение за сутки, температуру и влажность.</p>
+      <h2>Apple Watch, виджеты, напоминания и «Быстрые команды»</h2>
       <ul>
-        <li>Погоду отдаёт <strong>Apple WeatherKit</strong>. Туда уходит ваше <strong>примерное</strong> местоположение — приложение специально просит огрублённое, потому что для атмосферного давления улица и город неразличимы.</li>
-        <li>К нам не уходит ничего: сервера у нас по-прежнему нет.</li>
-        <li>Запрос делается только в момент начала приступа, не в фоне и не постоянно.</li>
-        <li>Обработка на стороне Apple подчиняется политике конфиденциальности Apple.</li>
-        <li>Выключение прекращает запросы. Уже сохранённая погода остаётся в записях, пока вы не удалите сами записи.</li>
+        <li><strong>Apple Watch.</strong> iPhone передаёт вашим часам только то, что нужно приложению на часах: идёт ли приступ и когда он начался, название последнего лекарства и язык интерфейса. Часы отправляют обратно ваши команды: начать или закончить приступ, записать приём. Обмен идёт напрямую между вашими устройствами через Apple WatchConnectivity, не через нас.</li>
+        <li><strong>Виджеты и Live Activity</strong> показывают состояние текущего приступа и дневника на экране «Домой» и экране блокировки. Их содержимое помечено как конфиденциальное, поэтому iOS может скрывать его, пока устройство заблокировано.</li>
+        <li><strong>Напоминания</strong> — локальные уведомления, запланированные на устройстве. Их текст может появляться на экране блокировки в соответствии с вашими настройками уведомлений.</li>
+        <li><strong>«Быстрые команды» и Siri</strong> (начать или закончить приступ, записать приём) выполняются на устройстве.</li>
       </ul>
     </section>
 
     <section class="block">
       <h2>Apple «Здоровье»</h2>
-      <p>Запись и чтение — разные вещи, и включаются они по отдельности.</p>
-      <p><strong>Что приложение записывает.</strong> Только по включённому обмену с «Здоровьем» и только два вида записей: головную боль — завершённый приступ с указанием силы — и тошноту, если вы её отметили. Больше ничего туда не уходит. Записанное подчиняется вашим настройкам «Здоровья» и политике Apple. Выключение обмена не удаляет уже записанное — удалить его можно в приложении «Здоровье».</p>
-      <p><strong>Что приложение читает.</strong> Три вида данных, каждый за своим переключателем и каждый выключен по умолчанию:</p>
+      <p>Запись и чтение — разные вещи, они включаются по отдельности в настройках приложения, в разделе «Здоровье». iOS спрашивает ваше разрешение на каждый тип.</p>
+      <h3>Что приложение записывает</h3>
+      <p>Только при включённом переключателе и только два типа: <strong>головную боль</strong> (завершённый приступ с началом, концом и силой) и <strong>тошноту</strong>, если вы её отметили. Записи помечаются как введённые вами. Больше ничего не записывается.</p>
+      <p>Выключение переключателя прекращает новые записи. Уже записанное остаётся в «Здоровье», пока вы его не удалите (см. «Удаление данных»).</p>
+      <h3>Что приложение читает</h3>
+      <p>Два типа, <strong>каждый за своим переключателем</strong> и <strong>каждый выключен по умолчанию</strong>:</p>
       <ul>
-        <li><strong>дни менструации</strong> — чтобы проверить, попадают ли приступы в окно вокруг цикла;</li>
-        <li><strong>сон</strong> — чтобы сравнить ночи перед днями с приступом и без него;</li>
-        <li><strong>выпитая вода</strong> — чтобы вам не пришлось записывать её дважды.</li>
+        <li><strong>менструальные выделения</strong> («Учитывать цикл») — чтобы увидеть, не собираются ли приступы вокруг менструации;</li>
+        <li><strong>анализ сна</strong> («Учитывать сон») — чтобы сравнить ночи перед днями с приступом и без него.</li>
       </ul>
-      <p>Больше ничего не читается. Разрешение спрашивается отдельно от записи, и выключение переключателя прекращает чтение этого вида полностью. Прочитанное никуда не уходит: оно используется на устройстве, чтобы посчитать числа для сводки и отчёта, и отдельной копией не сохраняется.</p>
+      <p>Больше ничего не читается: ни вода, ни лекарства, ни пульс, ни любые другие данные «Здоровья».</p>
+      <p>Прочитанное используется на устройстве, чтобы посчитать цифры в сводке и отчётах. Приложение не копирует его в дневник, не хранит, никуда не отправляет, не использует для рекламы и никогда не кладёт в iCloud. Устройство оно покидает только внутри отчёта PDF, который вы сами создаёте и которым сами делитесь (см. «Экспорт и отправка»).</p>
+    </section>
+
+    <section class="block">
+      <h2>Погода и местоположение</h2>
+      <p>Это единственная функция, которая выходит в сеть. <strong>По умолчанию она выключена</strong>; включается в настройках, в разделе «Погода», переключателем «Записывать погоду».</p>
+      <p>При включении iOS спрашивает разрешение на доступ к местоположению, пока приложение используется. По умолчанию приложение просит <strong>примерное</strong> местоположение: для атмосферного давления улица и город неразличимы.</p>
+      <p>Когда функция включена и вы начинаете приступ в приложении, оно один раз определяет ваше примерное местоположение и отправляет его в <strong>Apple WeatherKit</strong>. Вместе с приступом сохраняются атмосферное давление, его изменение за последние сутки, температура, влажность и текущие условия.</p>
+      <ul>
+        <li>Запрос делается только в момент начала приступа: никогда в фоне и никогда постоянно.</li>
+        <li>Местоположение не сохраняется в дневнике и не отправляется нам. Запрос обрабатывает Apple по своей политике конфиденциальности.</li>
+        <li>Если погоду получить не удалось (нет сети, нет разрешения, служба недоступна), приступ сохраняется без неё.</li>
+        <li>Правовое основание — ваше согласие, выраженное переключателем и разрешением iOS. Отозвать его можно в любой момент: выключить переключатель или изменить доступ к местоположению в настройках iOS. Уже сохранённая погода остаётся в приступах, пока вы их не удалите.</li>
+      </ul>
     </section>
 
     <section class="block">
       <h2>Покупки</h2>
-      <p>Оплату проводит Apple. Приложение не видит и не хранит ни данные карты, ни ваше имя, ни адрес — оно получает от системы только признак того, есть ли действующая покупка. Возвраты, отмены и продления происходят на стороне Apple.</p>
+      <p>Подписки и покупки проходят через Apple в App Store. Приложение не видит ни данных карты, ни имени, ни адреса: оно узнаёт только, есть ли действующая покупка. Возвраты, отмены и продления обрабатывает Apple.</p>
     </section>
 
     <section class="block">
-      <h2>Выгрузка: PDF-отчёт и CSV</h2>
-      <p>Оба файла собираются <strong>на устройстве и только по вашей команде</strong>: отчёт — по кнопке «Экспорт PDF», три таблицы CSV — по кнопке выгрузки в настройках. Они кладутся во временную папку приложения и удаляются, как только вы закрываете просмотр или лист «Поделиться».</p>
-      <p>Куда файл отправится дальше — решаете вы, выбирая получателя в системном листе. Приложение никуда его само не отправляет, и к нам он не попадает.</p>
+      <h2>Экспорт и отправка</h2>
+      <p>Файлы создаются <strong>на вашем устройстве и только по вашей просьбе</strong>:</p>
+      <ul>
+        <li><strong>Отчёт PDF для врача</strong> («Экспорт в PDF»). Перед экспортом вы выбираете, что в него войдёт. В отчёт могут попасть сводки по приступам, лекарствам, триггерам, сну и балл MIDAS. <strong>Личные заметки и данные о менструальном цикле попадают в него, только если вы их включите.</strong> В шапке отчёта стоят имя и фотография из вашего профиля, чтобы врачу было проще узнать отчёт; их можно выключить переключателем «Имя и фамилия» перед экспортом, и тогда на месте имени останется пустая строка. Смайлик профиля в отчёт не попадает.</li>
+        <li><strong>Таблицы CSV</strong> (Настройки → «Выгрузить в CSV»): приступы, приёмы и дни, включая заметки.</li>
+        <li><strong>Копия базы данных</strong> — предлагается, только если дневник не удаётся открыть, чтобы вы могли сохранить записи прежде всего остального.</li>
+      </ul>
+      <p>Куда файл пойдёт дальше, решаете вы, выбирая получателя в системном листе «Поделиться». Приложение никогда не отправляет файлы само, и к нам они не попадают. Файлы PDF и CSV временные и удаляются из хранилища приложения, как только вы закрываете просмотр или лист «Поделиться».</p>
+    </section>
+
+    <section class="block">
+      <h2>Письмо в поддержку</h2>
+      <p>«Написать в поддержку» в настройках открывает <strong>ваше собственное почтовое приложение</strong> с письмом на адрес <a href="mailto:support@fluco.studio">support@fluco.studio</a> и версией приложения в теме. Ничего не уходит, пока вы сами не отправите письмо.</p>
+      <p>Если вы нам пишете, мы получаем ваш адрес почты и то, что вы решили написать. Мы используем это только чтобы ответить вам и исправить проблему, о которой вы сообщили (правовое основание — обработка вашего обращения и наш законный интерес в поддержке приложения). Переписку мы храним только столько, сколько для этого нужно, и удаляем по вашей просьбе. Наш почтовый ящик обслуживает почтовый провайдер (Google Workspace), который может обрабатывать письма за пределами вашей страны с гарантиями, которых требует закон, например стандартными договорными условиями ЕС. Пожалуйста, не присылайте сведения о здоровье, если без них проблему не решить.</p>
+    </section>
+
+    <section class="block">
+      <h2>Отчёты о сбоях и оценки</h2>
+      <p>Если вы включили в настройках iOS «Делиться с разработчиками приложений», Apple может передавать нам обезличенные отчёты о сбоях и статистику использования. Этим управляете вы в iOS, и обрабатывает это Apple; само приложение ничего не отправляет. Приложение может показать стандартный запрос оценки Apple; ваша оценка уходит в Apple.</p>
     </section>
 
     <section class="block">
       <h2>Чего приложение не делает</h2>
       <ul>
-        <li>не собирает аналитику и не отслеживает ваше поведение;</li>
-        <li>не использует рекламные и иные идентификаторы;</li>
-        <li>не показывает рекламу;</li>
-        <li>не передаёт и не продаёт данные третьим лицам;</li>
-        <li>не обращается к сети ни за чем, кроме погоды и — если вы включили синхронизацию — вашего же личного хранилища iCloud;</li>
-        <li>не требует регистрации.</li>
+        <li>никакой аналитики и отслеживания поведения;</li>
+        <li>никакой рекламы и рекламного идентификатора;</li>
+        <li>никакой передачи или продажи данных;</li>
+        <li>никакой учётной записи и регистрации;</li>
+        <li>никакой синхронизации через облако;</li>
+        <li>никаких сетевых запросов, кроме описанного выше запроса погоды.</li>
       </ul>
     </section>
 
     <section class="block">
       <h2>Удаление данных</h2>
-      <p>Отдельные записи удаляются внутри приложения; «Стереть все данные» в настройках удаляет разом всё. Удаление приложения с устройства удаляет все его данные. Записи, ранее ушедшие в «Здоровье», удаляются в приложении «Здоровье». Если синхронизация была включена, удаление записи убирает её и из iCloud.</p>
-    </section>
-
-    <section class="block">
-      <h2>Дети</h2>
-      <p>Приложение не собирает персональные данные ни от кого, включая детей.</p>
+      <ul>
+        <li>Отдельные записи удаляются внутри приложения. Удаление приступа убирает и его запись из «Здоровья», если у приложения ещё есть право туда писать.</li>
+        <li><strong>Настройки → «Удалить все данные»</strong> стирает приступы вместе с погодой, приёмы, лекарства, отмеченные дни, ваши триггеры и способы облегчения, результаты MIDAS, план на приступ с данными врача, а также имя, смайлик и фотографию профиля. Кроме того, удаляются <strong>записи, которые приложение сделало в Apple «Здоровье», если у приложения ещё есть право записи в «Здоровье»</strong>. Если вы это право отозвали, iOS не даёт приложению их удалить — удалите их в приложении «Здоровье». Настройки (язык, оформление, напоминания, переключатели) остаются до удаления приложения.</li>
+        <li><strong>Удаление приложения</strong> стирает всё, что оно хранило на устройстве. Записи в «Здоровье», выгруженные вами файлы и ранее сделанные резервные копии устройства при этом не удаляются.</li>
+      </ul>
     </section>
 
     <section class="block">
       <h2>Ваши права</h2>
-      <p>Данные не покидают ваше устройство, а при включённой синхронизации лежат в вашем личном хранилище iCloud, к которому у нас доступа нет. Поэтому доступ к ним, их исправление, выгрузка и удаление находятся полностью в ваших руках — через само приложение и настройки устройства. Мы не располагаем копией ваших данных и не можем их выдать, изменить или удалить по запросу.</p>
+      <p>Ваш дневник к нам не попадает, поэтому свои права в отношении него вы осуществляете прямо в приложении: просматриваете и исправляете записи, выгружаете их (CSV) и удаляете. Копии у нас нет, и выдать, изменить или удалить её по запросу мы не можем.</p>
+      <p>В отношении данных, которые могут быть у нас (ваши письма в поддержку), по GDPR и аналогичным законам вы вправе получить к ним доступ, исправить и удалить их, ограничить их обработку или возразить против неё, получить их в переносимом виде и в любой момент отозвать согласие без влияния на прежнюю обработку. Пишите на <a href="mailto:privacy@fluco.studio">privacy@fluco.studio</a>; мы отвечаем в течение месяца. Вы также вправе подать жалобу в орган по защите данных страны, где вы живёте или работаете.</p>
+    </section>
+
+    <section class="block">
+      <h2>Дети</h2>
+      <p>Приложение не предназначено для детей. Оно не собирает персональные данные ни у кого, в том числе у детей.</p>
     </section>
 
     <section class="block">
       <h2>Изменения</h2>
-      <p>Если приложение начнёт обрабатывать данные иначе, эта политика будет обновлена, а дата вверху изменена. Существенные изменения будут описаны в самом приложении.</p>
+      <p>Если приложение начнёт обращаться с данными иначе, мы обновим эту политику, изменим её версию и дату выше, а о существенных изменениях расскажем в приложении.</p>
     </section>
 
     <section class="block">
-      <h2>Связаться</h2>
-      <p class="contact"><a href="mailto:privacy@fluco.studio">privacy@fluco.studio</a></p>
+      <h2>Контакты</h2>
+      <p class="contact">fluco.studio, [адрес]<br><a href="mailto:privacy@fluco.studio">privacy@fluco.studio</a></p>
     </section>
   </main>
 
   <main id="doc-en" lang="en" hidden>
     <h1>Privacy Policy</h1>
-    <p class="effective">Effective 13 September 2026</p>
+    <p class="effective">Version 2.1. Effective 6 October 2026. Replaces the version of 29 September 2026.</p>
 
     <div class="summary">
-      <p>The app collects nothing about you. Everything you record stays on your device. There is no server, no account, no analytics, no advertising and no third-party libraries.</p>
-      <p>The exceptions are off by default and you switch them on one at a time: weather, for which the app asks Apple using your approximate location; reading from Health — the days of your period, your sleep and the water you drank, each behind its own switch; and iCloud sync, which puts your records into your own private iCloud storage. Details below.</p>
+      <p>Your diary stays on your device. The app has no server, no account, no analytics, no advertising, no tracking and no third-party libraries. We, the developer, receive nothing from the app.</p>
+      <p>Three things are <strong>off by default</strong> and each is switched on by you:</p>
+      <ul>
+        <li><strong>writing to Apple Health</strong>: finished attacks as headache entries, plus nausea;</li>
+        <li><strong>reading from Apple Health</strong>: the days of your period and your sleep, each behind its own switch;</li>
+        <li><strong>weather recording</strong>: when you start an attack, your approximate location is sent to Apple WeatherKit to look up the barometric pressure.</li>
+      </ul>
+      <p>Anything else leaves the device only when you send it yourself: a PDF or CSV file you share, or an email you write to support.</p>
     </div>
 
     <section class="block">
-      <h2>What the app stores</h2>
-      <p>Only what you enter yourself:</p>
+      <h2>Who is responsible</h2>
+      <p>The data controller is <strong>fluco.studio</strong>, [address], email <a href="mailto:privacy@fluco.studio">privacy@fluco.studio</a>.</p>
+      <p>We act as controller only for the little that can reach us or that the app sends on its own (the weather request and the emails you send to support, both described below). We never receive your diary.</p>
+    </section>
+
+    <section class="block">
+      <h2>What the app stores on your device</h2>
+      <p>Only what you enter yourself, or what the app records at your request:</p>
       <ul>
-        <li>when attacks started and ended, pain intensity, symptoms and notes;</li>
-        <li>the triggers you tick;</li>
-        <li>medications from your own list, with times and doses;</li>
-        <li>the weather when an attack started, if you turned weather recording on;</li>
-        <li>your interface language, whether Health sharing is on, and whether sync is.</li>
+        <li><strong>attacks</strong>: start and end, pain intensity and how it changed, symptoms, aura, early signs, where and how it hurt, what you did for relief, and your notes;</li>
+        <li><strong>medications</strong>: your list (name, dose, unit, class, reminder schedule) and every dose you record, with its time, amount, effect, side effects and whether a second dose was needed;</li>
+        <li><strong>triggers and reliefs</strong>, including the ones you added yourself;</li>
+        <li><strong>days</strong>: triggers you marked for a day, your stress level and how much water you drank, all typed in by you;</li>
+        <li><strong>MIDAS questionnaire</strong>: your answers and the resulting score;</li>
+        <li><strong>rescue plan</strong>: its steps and, if you fill them in, your doctor's name, specialty and phone number;</li>
+        <li><strong>profile</strong>: name, emoji and photo. The photo is chosen through the system photo picker, so the app sees only the one picture you pick and has no access to the rest of your library;</li>
+        <li><strong>weather</strong> at the start of an attack, if weather recording is on (the location itself is not saved);</li>
+        <li><strong>settings</strong>: interface and report language, theme, reminders and the state of each switch.</li>
       </ul>
+      <p>Everything is kept in the app's private storage on your device and in a storage area shared only with the app's own widgets, so that the Home Screen widget and the Lock Screen Live Activity can show whether an attack is running. It is protected by the encryption built into your device.</p>
+      <p><strong>There is no cloud sync.</strong> The app does not copy your diary to iCloud or anywhere else. If you back up your device (iCloud Backup or a computer), iOS includes the app's data in that backup, as it does for every app; this is controlled by your backup settings and by Apple.</p>
     </section>
 
     <section class="block">
-      <h2>Where it is kept</h2>
-      <p>On your device, in the app's own storage. Nothing is sent anywhere except the weather lookup described below and — if you turn sync on — your own private iCloud storage.</p>
-    </section>
-
-    <section class="block">
-      <h2>iCloud sync</h2>
-      <p class="notice"><strong>Sync is switched off in this version:</strong> there is no switch in Settings, and records never leave the device. The section below describes how it will work once sync ships.</p>
-      <p>Settings contain a sync switch. It is <strong>off by default</strong>, and while it is off your records never leave the device.</p>
-      <p>With it on, your records sync through iCloud (CloudKit) and live in the <strong>private</strong> database of your Apple Account — on Apple's servers, under your Apple ID. The developer has no access to them: a private database is visible only to the account that owns it. You manage that data in your device's iCloud settings; Apple's storage of it is governed by Apple's privacy policy.</p>
-    </section>
-
-    <section class="block">
-      <h2>Weather and location</h2>
-      <p class="notice"><strong>Weather is switched off in this version:</strong> there is nowhere to turn it on, location is never requested, and the app makes no network requests at all. The section below describes how it will work once weather ships.</p>
-      <p>This is the only thing the app goes online for. It is <strong>off by default</strong> and you turn it on in the app's settings.</p>
-      <p>With it on, when an attack starts the app looks up the weather where you are and saves the barometric pressure, its change over the past 24 hours, the temperature and the humidity alongside the record.</p>
+      <h2>Apple Watch, widgets, reminders and Shortcuts</h2>
       <ul>
-        <li>Weather comes from <strong>Apple WeatherKit</strong>. Your <strong>approximate</strong> location is sent there — the app deliberately asks for reduced accuracy, because street and city are indistinguishable for barometric pressure.</li>
-        <li>Nothing is sent to us: we still have no server.</li>
-        <li>The lookup happens only when an attack starts, never in the background and never continuously.</li>
-        <li>Apple's handling of that request is governed by Apple's privacy policy.</li>
-        <li>Turning it off stops the requests. Weather already saved stays in your records until you delete the records themselves.</li>
+        <li><strong>Apple Watch.</strong> The iPhone sends your paired watch only what the watch app needs to work: whether an attack is running and when it started, the name of your last medication, and the interface language. The watch sends back your commands: start or end an attack, record a dose. This goes directly between your own devices through Apple's WatchConnectivity, never through us.</li>
+        <li><strong>Widgets and Live Activity</strong> show the state of the current attack and the diary on your Home Screen and Lock Screen. Their contents are marked as sensitive, so iOS can hide them while the device is locked.</li>
+        <li><strong>Reminders</strong> are local notifications scheduled on the device. Their text may appear on the Lock Screen according to your notification settings.</li>
+        <li><strong>Shortcuts and Siri actions</strong> (start or end an attack, record a dose) run on the device.</li>
       </ul>
     </section>
 
     <section class="block">
       <h2>Apple Health</h2>
-      <p>Writing and reading are separate things, switched on separately.</p>
-      <p><strong>What the app writes.</strong> Only with Health sharing on, and only two kinds of entry: headache — a finished attack with its intensity — and nausea, when you record it. Nothing else goes there. What is written is governed by your Health settings and Apple's policies. Turning sharing off does not delete what was already written; you can delete it in the Health app.</p>
-      <p><strong>What the app reads.</strong> Three kinds of data, each behind its own switch and each off by default:</p>
+      <p>Writing and reading are separate and are switched on separately in the app's Settings, under Apple Health. iOS asks for your permission for each type.</p>
+      <h3>What the app writes</h3>
+      <p>Only with the Health switch on, and only two types: <strong>headache</strong> (a finished attack with its start, end and intensity) and <strong>nausea</strong>, when you record it. They are marked as entered by you. Nothing else is written.</p>
+      <p>Turning the switch off stops new entries. Entries already written stay in Health until you delete them (see "Deleting your data").</p>
+      <h3>What the app reads</h3>
+      <p>Two types, <strong>each behind its own switch</strong> and <strong>each off by default</strong>:</p>
       <ul>
-        <li><strong>menstrual flow</strong> — to check whether attacks fall in the window around your cycle;</li>
-        <li><strong>sleep analysis</strong> — to compare the nights before days with an attack and without one;</li>
-        <li><strong>dietary water</strong> — so you do not have to record it twice.</li>
+        <li><strong>menstrual flow</strong> ("Take the cycle into account"), to see whether attacks cluster around your period;</li>
+        <li><strong>sleep analysis</strong> ("Take sleep into account"), to compare the nights before days with and without an attack.</li>
       </ul>
-      <p>Nothing else is read. Permission is asked separately from writing, and turning a switch off stops that reading entirely. What is read goes nowhere: it is used on the device to compute figures for the summary and the report, and the app keeps no separate copy of it.</p>
+      <p>Nothing else is read: not water, not medications, not heart rate, not any other Health data.</p>
+      <p>What is read is used on the device to calculate the figures in the summary and the reports. The app does not copy it into the diary, does not keep it, does not send it anywhere, does not use it for advertising and never puts it in iCloud. It leaves the device only inside a PDF report you create and share yourself (see "Export and sharing").</p>
+    </section>
+
+    <section class="block">
+      <h2>Weather and location</h2>
+      <p>This is the only feature that goes online. It is <strong>off by default</strong>; you turn it on in Settings, under Weather, with "Record the weather".</p>
+      <p>When you turn it on, iOS asks for permission to use your location while the app is in use. The app asks for <strong>approximate</strong> location by default, because for barometric pressure a street and a city are the same.</p>
+      <p>With it on, when you start an attack in the app, the app determines your approximate location once and sends it to <strong>Apple WeatherKit</strong>. It saves with the attack the barometric pressure, its change over the past 24 hours, the temperature, the humidity and the current conditions.</p>
+      <ul>
+        <li>The lookup happens only when an attack is started: never in the background, never continuously.</li>
+        <li>Your location is not saved in the diary and is not sent to us. Apple processes the request under Apple's privacy policy.</li>
+        <li>If the weather cannot be obtained (no network, no permission, service not available), the attack is saved without it.</li>
+        <li>The legal basis is your consent, given by the switch and the iOS permission. You can withdraw it at any time: turn the switch off or change location access in iOS Settings. Weather already saved stays with the attacks until you delete them.</li>
+      </ul>
     </section>
 
     <section class="block">
       <h2>Purchases</h2>
-      <p>Payment is handled by Apple. The app never sees or stores card details, your name or your address — it receives only whether an active purchase exists. Refunds, cancellations and renewals happen on Apple's side.</p>
+      <p>Subscriptions and purchases are handled by Apple through the App Store. The app never sees your card details, name or address: it only learns whether an active purchase exists. Refunds, cancellations and renewals are handled by Apple.</p>
     </section>
 
     <section class="block">
-      <h2>Export: PDF report and CSV</h2>
-      <p>Both are produced <strong>on your device and only when you ask</strong>: the report through the Export PDF button, the three CSV tables through the export button in Settings. They are written to the app's temporary folder and deleted as soon as you close the preview or the share sheet.</p>
-      <p>Where a file goes next is your decision, made when you pick a recipient in the system share sheet. The app never sends it anywhere by itself, and it never reaches us.</p>
+      <h2>Export and sharing</h2>
+      <p>Files are created <strong>on your device and only when you ask</strong>:</p>
+      <ul>
+        <li><strong>PDF report for your doctor</strong> (Export PDF). Before exporting you choose what goes in. The report can include summaries of your attacks, medications, triggers, sleep and your MIDAS score. <strong>Your personal notes and your menstrual cycle are included only if you turn them on.</strong> The report's header shows the name and photo from your profile, so your doctor can tell whose report it is; you can turn them off with the “Name and surname” switch before exporting, and the report then has an empty line for the name. Your profile emoji is never included.</li>
+        <li><strong>CSV tables</strong> (Settings, Export to CSV): attacks, doses and days, including your notes.</li>
+        <li><strong>A copy of the database</strong>, offered only if the diary cannot be opened, so that you can save your records before doing anything else.</li>
+      </ul>
+      <p>Where a file goes next is up to you: you choose the recipient in the system share sheet. The app never sends files by itself, and they never reach us. The PDF and CSV files are temporary and are removed from the app's storage once you close the preview or the share sheet.</p>
+    </section>
+
+    <section class="block">
+      <h2>Contacting support</h2>
+      <p>"Write to support" in Settings opens <strong>your own mail app</strong> with a message addressed to <a href="mailto:support@fluco.studio">support@fluco.studio</a> and the app version in the subject. Nothing is sent until you send it.</p>
+      <p>If you write to us, we receive your email address and whatever you choose to write. We use it only to answer you and to fix the problem you report (legal basis: handling your request and our legitimate interest in supporting the app). We keep the conversation only as long as needed for that, and delete it on request. Our mailbox is hosted by our email provider (Google Workspace), which may process messages outside your country under the safeguards required by law, such as the EU Standard Contractual Clauses. Please do not send health details unless they are needed to solve the problem.</p>
+    </section>
+
+    <section class="block">
+      <h2>Crash reports and ratings</h2>
+      <p>If you turned on "Share With App Developers" in iOS settings, Apple may give us anonymous crash reports and usage statistics. This is controlled by you in iOS and handled by Apple; the app itself sends nothing. The app may show Apple's standard rating prompt; your rating goes to Apple.</p>
     </section>
 
     <section class="block">
       <h2>What the app does not do</h2>
       <ul>
-        <li>no analytics, no behavioural tracking;</li>
-        <li>no advertising or other identifiers;</li>
-        <li>no ads;</li>
-        <li>no sharing or selling of data to third parties;</li>
-        <li>no network requests for anything but weather and — if you turned sync on — your own private iCloud storage;</li>
-        <li>no sign-up.</li>
+        <li>no analytics or behavioural tracking;</li>
+        <li>no advertising and no advertising identifier;</li>
+        <li>no sharing or selling of data;</li>
+        <li>no account and no sign-up;</li>
+        <li>no cloud sync;</li>
+        <li>no network requests other than the weather lookup described above.</li>
       </ul>
     </section>
 
     <section class="block">
       <h2>Deleting your data</h2>
-      <p>Delete individual records inside the app, or use Erase all data in Settings to remove everything at once. Deleting the app from your device deletes all of its data. Entries previously written to Health are deleted in the Health app. If sync was on, deleting a record removes it from iCloud too.</p>
-    </section>
-
-    <section class="block">
-      <h2>Children</h2>
-      <p>The app collects no personal data from anyone, children included.</p>
+      <ul>
+        <li>Delete individual records inside the app. Deleting an attack also removes its entry from Health, as long as the app is still allowed to write there.</li>
+        <li><strong>Settings → Delete all data</strong> erases attacks with their weather, doses, medications, marked days, your own triggers and reliefs, MIDAS results, the rescue plan with your doctor's details, and your profile name, emoji and photo. It also removes <strong>the entries the app wrote to Apple Health, as long as the app is still allowed to write to Health</strong>. If you have taken that permission away, iOS does not let the app delete them; delete them in the Health app. Your settings (language, theme, reminders, switches) remain until you delete the app.</li>
+        <li><strong>Deleting the app</strong> removes everything it stored on the device. It does not remove entries in Health, files you exported, or earlier device backups.</li>
+      </ul>
     </section>
 
     <section class="block">
       <h2>Your rights</h2>
-      <p>The data never leaves your device and, with sync on, lives in your own private iCloud storage, to which we have no access. Access, correction, export and deletion are therefore entirely in your hands, through the app and your device settings. We hold no copy of your data and cannot produce, change or delete it on request.</p>
+      <p>Your diary never reaches us, so you exercise your rights over it directly in the app: view and correct your records, export them (CSV), and delete them. We hold no copy and cannot produce, change or delete it on request.</p>
+      <p>For the data we may hold (your emails to support), and under the GDPR and similar laws, you have the right to access, correct and delete it, to restrict or object to its processing, to data portability, and to withdraw consent at any time without affecting earlier processing. Write to <a href="mailto:privacy@fluco.studio">privacy@fluco.studio</a>; we reply within one month. You also have the right to lodge a complaint with the data protection authority in the country where you live or work.</p>
+    </section>
+
+    <section class="block">
+      <h2>Children</h2>
+      <p>The app is not directed at children. It collects no personal data from anyone, children included.</p>
     </section>
 
     <section class="block">
       <h2>Changes</h2>
-      <p>If the app starts handling data differently, this policy will be updated and the date above changed. Material changes will be described in the app.</p>
+      <p>If the app starts handling data differently, we will update this policy, change its version and date above, and describe material changes in the app.</p>
     </section>
 
     <section class="block">
       <h2>Contact</h2>
-      <p class="contact"><a href="mailto:privacy@fluco.studio">privacy@fluco.studio</a></p>
+      <p class="contact">fluco.studio, [address]<br><a href="mailto:privacy@fluco.studio">privacy@fluco.studio</a></p>
     </section>
   </main>
 
